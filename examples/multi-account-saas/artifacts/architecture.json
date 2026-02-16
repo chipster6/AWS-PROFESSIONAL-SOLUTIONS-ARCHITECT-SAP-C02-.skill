@@ -1,0 +1,44 @@
+{
+  "version": "v1",
+  "system": {
+    "name": "Multi-account SaaS",
+    "overview": "Multi-account SaaS with shared services and centralized security."
+  },
+  "constraints": {
+    "regions": ["us-east-1"],
+    "compliance": ["none"],
+    "rto": "4h",
+    "rpo": "4h",
+    "budget_sensitivity": "medium"
+  },
+  "assumptions": [
+    { "id": "A-001", "statement": "Multiple environments and teams require separation of duties." }
+  ],
+  "decisions": [
+    {
+      "id": "D-001",
+      "title": "Landing zone strategy",
+      "decision": "Multi-account with Control Tower and standard OUs.",
+      "adr_ref": "docs/02_ARCHITECTURE/ADRs/ADR-0001-landing-zone-strategy-control-tower.md",
+      "pillars": ["security", "operational_excellence", "reliability"],
+      "cost_drivers": ["security_services", "log_retention"]
+    },
+    {
+      "id": "D-002",
+      "title": "Network architecture",
+      "decision": "Hub-and-spoke with centralized egress and endpoints.",
+      "adr_ref": "docs/02_ARCHITECTURE/ADRs/ADR-0002-network-hub-spoke-egress.md",
+      "pillars": ["security", "reliability"],
+      "cost_drivers": ["nat_gateways", "vpc_endpoints"]
+    },
+    {
+      "id": "D-003",
+      "title": "Security baseline",
+      "decision": "Delegated admin for Security Hub/GuardDuty, org CloudTrail/Config.",
+      "adr_ref": "docs/02_ARCHITECTURE/ADRs/ADR-0003-security-baseline-delegated-admin.md",
+      "pillars": ["security", "operational_excellence"],
+      "cost_drivers": ["log_ingest", "security_services"]
+    }
+  ]
+}
+

@@ -1,0 +1,6 @@
+interface:
+  name: aws-migration-dr
+  version: 1.0.0
+allow_implicit_invocation: true
+dependencies:
+  - aws-documentation-mcp

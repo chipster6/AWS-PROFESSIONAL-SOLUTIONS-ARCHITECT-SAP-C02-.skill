@@ -1,0 +1,44 @@
+{
+  "version": "v1",
+  "system": {
+    "name": "Regulated Workload",
+    "overview": "Regulated workload with strict audit, retention, and evidence requirements."
+  },
+  "constraints": {
+    "regions": ["us-east-1"],
+    "compliance": ["regulated"],
+    "rto": "8h",
+    "rpo": "4h",
+    "budget_sensitivity": "low"
+  },
+  "assumptions": [
+    { "id": "A-001", "statement": "Evidence retention must be 1-7 years." }
+  ],
+  "decisions": [
+    {
+      "id": "D-001",
+      "title": "Landing zone strategy",
+      "decision": "Multi-account with log archive and security accounts.",
+      "adr_ref": "docs/02_ARCHITECTURE/ADRs/ADR-0001-regulated-landing-zone.md",
+      "pillars": ["security", "operational_excellence"],
+      "cost_drivers": ["log_retention", "security_services"]
+    },
+    {
+      "id": "D-002",
+      "title": "Security baseline",
+      "decision": "Org CloudTrail/Config and immutable log storage.",
+      "adr_ref": "docs/02_ARCHITECTURE/ADRs/ADR-0002-immutability-and-retention.md",
+      "pillars": ["security", "reliability"],
+      "cost_drivers": ["log_ingest", "object_lock"]
+    },
+    {
+      "id": "D-003",
+      "title": "Network architecture",
+      "decision": "Segmentation with private subnets and endpoints.",
+      "adr_ref": "docs/02_ARCHITECTURE/ADRs/ADR-0003-network-segmentation-private-endpoints.md",
+      "pillars": ["security", "performance_efficiency"],
+      "cost_drivers": ["vpc_endpoints", "nat_gateways"]
+    }
+  ]
+}
+

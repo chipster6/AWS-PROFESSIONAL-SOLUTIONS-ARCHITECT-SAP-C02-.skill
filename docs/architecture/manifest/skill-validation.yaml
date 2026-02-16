@@ -1,0 +1,62 @@
+{
+  "actions": [
+    {
+      "exit_code": 0,
+      "inputs": {
+        "has_notes_arg": true,
+        "interactive": false,
+        "notes_file": "",
+        "scenario": "professional",
+        "system": "skill-validation"
+      },
+      "outputs": {
+        "notes_path": "/Users/cody/Documents/Skills/SAP-C02-AWS-SOLUTION-ARCHITECT-PROFESSIONAL/docs/architecture/reviews/EVAL-NOTES-20260216.md"
+      },
+      "script": "run_evals.py",
+      "timestamp": "2026-02-16T12:46:58.477422+00:00",
+      "workflow_version": "1.0.0"
+    },
+    {
+      "exit_code": 0,
+      "inputs": {
+        "interactive": false,
+        "system": "skill-validation"
+      },
+      "outputs": {
+        "index_path": "/Users/cody/Documents/Skills/SAP-C02-AWS-SOLUTION-ARCHITECT-PROFESSIONAL/docs/architecture/index.md",
+        "manifest_path": "/Users/cody/Documents/Skills/SAP-C02-AWS-SOLUTION-ARCHITECT-PROFESSIONAL/docs/architecture/manifest/skill-validation.yaml"
+      },
+      "script": "init_arch_workflow.py",
+      "timestamp": "2026-02-16T12:46:58.503204+00:00",
+      "workflow_version": "1.0.0"
+    }
+  ],
+  "adrs": [],
+  "artifacts": {
+    "decisions_dir": "/Users/cody/Documents/Skills/SAP-C02-AWS-SOLUTION-ARCHITECT-PROFESSIONAL/docs/architecture/decisions",
+    "diagrams_dir": "/Users/cody/Documents/Skills/SAP-C02-AWS-SOLUTION-ARCHITECT-PROFESSIONAL/docs/architecture/diagrams",
+    "index": "/Users/cody/Documents/Skills/SAP-C02-AWS-SOLUTION-ARCHITECT-PROFESSIONAL/docs/architecture/index.md",
+    "manifest_dir": "/Users/cody/Documents/Skills/SAP-C02-AWS-SOLUTION-ARCHITECT-PROFESSIONAL/docs/architecture/manifest",
+    "reviews_dir": "/Users/cody/Documents/Skills/SAP-C02-AWS-SOLUTION-ARCHITECT-PROFESSIONAL/docs/architecture/reviews",
+    "runbooks_dir": "/Users/cody/Documents/Skills/SAP-C02-AWS-SOLUTION-ARCHITECT-PROFESSIONAL/docs/architecture/runbooks",
+    "solution_overviews_dir": "/Users/cody/Documents/Skills/SAP-C02-AWS-SOLUTION-ARCHITECT-PROFESSIONAL/docs/architecture/solution-overviews",
+    "threat_models_dir": "/Users/cody/Documents/Skills/SAP-C02-AWS-SOLUTION-ARCHITECT-PROFESSIONAL/docs/architecture/threat-models"
+  },
+  "decision_traces": [],
+  "evals": [
+    {
+      "notes_path": "/Users/cody/Documents/Skills/SAP-C02-AWS-SOLUTION-ARCHITECT-PROFESSIONAL/docs/architecture/reviews/EVAL-NOTES-20260216.md",
+      "scenarios": [
+        "professional"
+      ],
+      "timestamp": "2026-02-16T12:46:58.477421+00:00"
+    }
+  ],
+  "last_updated": "2026-02-16T12:46:58.503049+00:00",
+  "manifest_path": "/Users/cody/Documents/Skills/SAP-C02-AWS-SOLUTION-ARCHITECT-PROFESSIONAL/docs/architecture/manifest/skill-validation.yaml",
+  "repo_root": "/Users/cody/Documents/Skills/SAP-C02-AWS-SOLUTION-ARCHITECT-PROFESSIONAL",
+  "system": "skill-validation",
+  "validations": [],
+  "wa_reviews": [],
+  "workflow_version": "1.0.0"
+}

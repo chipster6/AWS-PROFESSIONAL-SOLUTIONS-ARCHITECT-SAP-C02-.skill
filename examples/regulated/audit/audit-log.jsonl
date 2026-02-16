@@ -1,0 +1,2 @@
+{"event_id":"00000000-0000-0000-0000-000000000000","timestamp":"2026-02-15T00:00:00Z","stage":"discovery","actor":"agent","session_id":"reg-001","project_id":"regulated","decision":"audit log initialized (genesis)","adr_id":null,"adr_path":null,"assumptions":[],"cost":null,"references":[],"approval":null,"prev_event_hash":"0000000000000000000000000000000000000000000000000000000000000000","event_hash":"<sha256>"}
+

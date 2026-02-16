@@ -1,0 +1,258 @@
+actions:
+- exit_code: 0
+  inputs:
+    interactive: false
+    system: verify11
+  outputs:
+    index_path: /Users/cody/Documents/Skills/SAP-C02-AWS-SOLUTION-ARCHITECT-PROFESSIONAL/docs/architecture/index.md
+    manifest_path: /Users/cody/Documents/Skills/SAP-C02-AWS-SOLUTION-ARCHITECT-PROFESSIONAL/docs/architecture/manifest/verify11.yaml
+  script: init_arch_workflow.py
+  timestamp: '2026-02-16T10:40:33.468077+00:00'
+  workflow_version: 1.0.0
+- exit_code: 0
+  inputs:
+    category: data-store
+    date: null
+    interactive: false
+    owners: platform-team
+    slug: db-choice
+    status: Accepted
+    superseded_by: ''
+    supersedes: ''
+    system: verify11
+    tags: database,consistency
+    template: short
+    title: Database choice
+  outputs:
+    adr_path: /Users/cody/Documents/Skills/SAP-C02-AWS-SOLUTION-ARCHITECT-PROFESSIONAL/docs/architecture/decisions/ADR-20260216-db-choice.md
+    index_path: /Users/cody/Documents/Skills/SAP-C02-AWS-SOLUTION-ARCHITECT-PROFESSIONAL/docs/architecture/index.md
+  script: new_adr.py
+  timestamp: '2026-02-16T10:40:33.510158+00:00'
+  workflow_version: 1.0.0
+- exit_code: 0
+  inputs:
+    date: null
+    interactive: false
+    system: verify11
+  outputs:
+    wa_review_path: /Users/cody/Documents/Skills/SAP-C02-AWS-SOLUTION-ARCHITECT-PROFESSIONAL/docs/architecture/reviews/WA-REVIEW-20260216-verify11.md
+  script: wa_review.py
+  timestamp: '2026-02-16T10:40:33.549147+00:00'
+  workflow_version: 1.0.0
+- exit_code: 1
+  inputs:
+    allow_fail_pillars: false
+    interactive: false
+    max_needs_work: 10
+    system: verify11
+  outputs:
+    issues_count: 7
+    result: fail
+  script: validate_archifacts.py
+  timestamp: '2026-02-16T10:40:48.462799+00:00'
+  workflow_version: 1.0.0
+- exit_code: 1
+  inputs:
+    allow_fail_pillars: false
+    interactive: false
+    max_needs_work: 2
+    system: verify11
+  outputs:
+    issues_count: 7
+    result: fail
+  script: validate_archifacts.py
+  timestamp: '2026-02-16T10:40:48.469178+00:00'
+  workflow_version: 1.0.0
+- exit_code: 1
+  inputs:
+    allow_fail_pillars: false
+    interactive: false
+    max_needs_work: 10
+    system: verify11
+  outputs:
+    issues_count: 7
+    result: fail
+  script: validate_archifacts.py
+  timestamp: '2026-02-16T10:40:48.471367+00:00'
+  workflow_version: 1.0.0
+- exit_code: 1
+  inputs:
+    allow_fail_pillars: false
+    interactive: false
+    max_needs_work: 2
+    system: verify11
+  outputs:
+    issues_count: 1
+    result: fail
+  script: validate_archifacts.py
+  timestamp: '2026-02-16T10:41:03.118467+00:00'
+  workflow_version: 1.0.0
+- exit_code: 0
+  inputs:
+    allow_fail_pillars: false
+    interactive: false
+    max_needs_work: 3
+    system: verify11
+  outputs:
+    issues_count: 0
+    result: pass
+  script: validate_archifacts.py
+  timestamp: '2026-02-16T10:41:03.159952+00:00'
+  workflow_version: 1.0.0
+- exit_code: 1
+  inputs:
+    allow_fail_pillars: false
+    interactive: false
+    max_needs_work: 3
+    system: verify11
+  outputs:
+    issues_count: 1
+    result: fail
+  script: validate_archifacts.py
+  timestamp: '2026-02-16T10:41:03.204838+00:00'
+  workflow_version: 1.0.0
+- exit_code: 0
+  inputs:
+    date: null
+    interactive: false
+    system: verify11
+  outputs:
+    decision_trace_path: /Users/cody/Documents/Skills/SAP-C02-AWS-SOLUTION-ARCHITECT-PROFESSIONAL/docs/architecture/reviews/DECISION-TRACE-20260216-verify11.md
+    marker_count: 2
+  script: decision_trace.py
+  timestamp: '2026-02-16T10:41:18.291089+00:00'
+  workflow_version: 1.0.0
+- exit_code: 1
+  inputs:
+    allow_fail_pillars: false
+    interactive: false
+    max_needs_work: 2
+    system: verify11
+  outputs:
+    issues_count: 2
+    result: fail
+  script: validate_archifacts.py
+  timestamp: '2026-02-16T14:00:17.940867+00:00'
+  workflow_version: 1.0.0
+- exit_code: 1
+  inputs:
+    allow_fail_pillars: false
+    interactive: false
+    max_needs_work: 10
+    system: verify11
+  outputs:
+    issues_count: 1
+    result: fail
+  script: validate_archifacts.py
+  timestamp: '2026-02-16T14:00:30.747073+00:00'
+  workflow_version: 1.0.0
+adrs:
+- category: data-store
+  date: '2026-02-16'
+  decision_id: db-choice
+  owners:
+  - platform-team
+  path: /Users/cody/Documents/Skills/SAP-C02-AWS-SOLUTION-ARCHITECT-PROFESSIONAL/docs/architecture/decisions/ADR-20260216-db-choice.md
+  slug: db-choice
+  status: Accepted
+artifacts:
+  decisions_dir: /Users/cody/Documents/Skills/SAP-C02-AWS-SOLUTION-ARCHITECT-PROFESSIONAL/docs/architecture/decisions
+  diagrams_dir: /Users/cody/Documents/Skills/SAP-C02-AWS-SOLUTION-ARCHITECT-PROFESSIONAL/docs/architecture/diagrams
+  index: /Users/cody/Documents/Skills/SAP-C02-AWS-SOLUTION-ARCHITECT-PROFESSIONAL/docs/architecture/index.md
+  manifest_dir: /Users/cody/Documents/Skills/SAP-C02-AWS-SOLUTION-ARCHITECT-PROFESSIONAL/docs/architecture/manifest
+  reviews_dir: /Users/cody/Documents/Skills/SAP-C02-AWS-SOLUTION-ARCHITECT-PROFESSIONAL/docs/architecture/reviews
+  runbooks_dir: /Users/cody/Documents/Skills/SAP-C02-AWS-SOLUTION-ARCHITECT-PROFESSIONAL/docs/architecture/runbooks
+  solution_overviews_dir: /Users/cody/Documents/Skills/SAP-C02-AWS-SOLUTION-ARCHITECT-PROFESSIONAL/docs/architecture/solution-overviews
+  threat_models_dir: /Users/cody/Documents/Skills/SAP-C02-AWS-SOLUTION-ARCHITECT-PROFESSIONAL/docs/architecture/threat-models
+decision_traces:
+- path: /Users/cody/Documents/Skills/SAP-C02-AWS-SOLUTION-ARCHITECT-PROFESSIONAL/docs/architecture/reviews/DECISION-TRACE-20260216-verify11.md
+  timestamp: '2026-02-16T10:41:18.291087+00:00'
+last_updated: '2026-02-16T14:00:30.746895+00:00'
+manifest_path: /Users/cody/Documents/Skills/SAP-C02-AWS-SOLUTION-ARCHITECT-PROFESSIONAL/docs/architecture/manifest/verify11.yaml
+repo_root: /Users/cody/Documents/Skills/SAP-C02-AWS-SOLUTION-ARCHITECT-PROFESSIONAL
+system: verify11
+validations:
+- gate:
+    allow_fail_pillars: false
+    max_needs_work: 10
+  issues:
+  - 'Missing score for pillar: Operational Excellence'
+  - 'Missing score for pillar: Security'
+  - 'Missing score for pillar: Reliability'
+  - 'Missing score for pillar: Performance Efficiency'
+  - 'Missing score for pillar: Cost Optimization'
+  - 'Missing score for pillar: Sustainability'
+  - Missing ADR mapping for MAJOR_DECISION key 'unknown-key' (networking | Force missing
+    ADR mapping test).
+  result: fail
+  timestamp: '2026-02-16T10:40:48.462797+00:00'
+- gate:
+    allow_fail_pillars: false
+    max_needs_work: 2
+  issues:
+  - 'Missing score for pillar: Operational Excellence'
+  - 'Missing score for pillar: Security'
+  - 'Missing score for pillar: Reliability'
+  - 'Missing score for pillar: Performance Efficiency'
+  - 'Missing score for pillar: Cost Optimization'
+  - 'Missing score for pillar: Sustainability'
+  - Missing ADR mapping for MAJOR_DECISION key 'unknown-key' (networking | Force missing
+    ADR mapping test).
+  result: fail
+  timestamp: '2026-02-16T10:40:48.469175+00:00'
+- gate:
+    allow_fail_pillars: false
+    max_needs_work: 10
+  issues:
+  - 'Missing score for pillar: Operational Excellence'
+  - 'Missing score for pillar: Security'
+  - 'Missing score for pillar: Reliability'
+  - 'Missing score for pillar: Performance Efficiency'
+  - 'Missing score for pillar: Cost Optimization'
+  - 'Missing score for pillar: Sustainability'
+  - Missing ADR mapping for MAJOR_DECISION key 'unknown-key' (networking | Force missing
+    ADR mapping test).
+  result: fail
+  timestamp: '2026-02-16T10:40:48.471364+00:00'
+- gate:
+    allow_fail_pillars: false
+    max_needs_work: 2
+  issues:
+  - 'Gate failure: Needs Work count (3) exceeds max (2).'
+  result: fail
+  timestamp: '2026-02-16T10:41:03.118464+00:00'
+- gate:
+    allow_fail_pillars: false
+    max_needs_work: 3
+  issues: []
+  result: pass
+  timestamp: '2026-02-16T10:41:03.159949+00:00'
+- gate:
+    allow_fail_pillars: false
+    max_needs_work: 3
+  issues:
+  - Missing ADR mapping for MAJOR_DECISION key 'unknown-key' (networking | Force missing
+    ADR mapping test).
+  result: fail
+  timestamp: '2026-02-16T10:41:03.204835+00:00'
+- gate:
+    allow_fail_pillars: false
+    max_needs_work: 2
+  issues:
+  - 'Missing required solution overview: /Users/cody/Documents/Skills/SAP-C02-AWS-SOLUTION-ARCHITECT-PROFESSIONAL/docs/architecture/solution-overviews/verify11.md.
+    Create docs/architecture/solution-overviews/<system>.md and rerun.'
+  - 'Gate failure: Needs Work count (3) exceeds max (2).'
+  result: fail
+  timestamp: '2026-02-16T14:00:17.940863+00:00'
+- gate:
+    allow_fail_pillars: false
+    max_needs_work: 10
+  issues:
+  - Missing ADR mapping for MAJOR_DECISION key 'unknown-key' (networking | Force missing
+    ADR mapping test).
+  result: fail
+  timestamp: '2026-02-16T14:00:30.747070+00:00'
+wa_reviews:
+- date: '2026-02-16'
+  path: /Users/cody/Documents/Skills/SAP-C02-AWS-SOLUTION-ARCHITECT-PROFESSIONAL/docs/architecture/reviews/WA-REVIEW-20260216-verify11.md
+workflow_version: 1.0.0

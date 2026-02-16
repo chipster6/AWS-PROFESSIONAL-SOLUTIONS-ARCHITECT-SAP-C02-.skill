@@ -1,0 +1,9 @@
+```mermaid
+flowchart LR
+  user["User"] --> edge["Edge (per workload account)"]
+  edge --> app["Workload services"]
+  app --> data["Workload data stores"]
+  app --> shared["Shared services"]
+  shared --> log["Log archive account"]
+```
+

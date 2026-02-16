@@ -1,0 +1,254 @@
+{
+  "actions": [
+    {
+      "exit_code": 0,
+      "inputs": {
+        "interactive": false,
+        "system": "sample-system"
+      },
+      "outputs": {
+        "index_path": "/Users/cody/Documents/Skills/SAP-C02-AWS-SOLUTION-ARCHITECT-PROFESSIONAL/docs/architecture/index.md",
+        "manifest_path": "/Users/cody/Documents/Skills/SAP-C02-AWS-SOLUTION-ARCHITECT-PROFESSIONAL/docs/architecture/manifest/sample-system.yaml"
+      },
+      "script": "init_arch_workflow.py",
+      "timestamp": "2026-02-16T08:11:23.260076+00:00",
+      "workflow_version": "1.0.0"
+    },
+    {
+      "exit_code": 0,
+      "inputs": {
+        "category": "data-store",
+        "date": null,
+        "interactive": false,
+        "owners": "platform,security",
+        "slug": "db-choice",
+        "status": "accepted",
+        "superseded_by": "",
+        "supersedes": "",
+        "system": "sample-system",
+        "tags": "critical,db",
+        "template": "full",
+        "title": "Database choice"
+      },
+      "outputs": {
+        "adr_path": "/Users/cody/Documents/Skills/SAP-C02-AWS-SOLUTION-ARCHITECT-PROFESSIONAL/docs/architecture/decisions/ADR-20260216-db-choice.md",
+        "index_path": "/Users/cody/Documents/Skills/SAP-C02-AWS-SOLUTION-ARCHITECT-PROFESSIONAL/docs/architecture/index.md"
+      },
+      "script": "new_adr.py",
+      "timestamp": "2026-02-16T08:22:33.049760+00:00",
+      "workflow_version": "1.0.0"
+    },
+    {
+      "exit_code": 1,
+      "inputs": {
+        "allow_fail_pillars": false,
+        "interactive": false,
+        "max_needs_work": 2,
+        "system": "sample-system"
+      },
+      "outputs": {
+        "issues_count": 7,
+        "result": "fail"
+      },
+      "script": "validate_archifacts.py",
+      "timestamp": "2026-02-16T08:22:36.917049+00:00",
+      "workflow_version": "1.0.0"
+    },
+    {
+      "exit_code": 0,
+      "inputs": {
+        "date": null,
+        "interactive": false,
+        "system": "sample-system"
+      },
+      "outputs": {
+        "wa_review_path": "/Users/cody/Documents/Skills/SAP-C02-AWS-SOLUTION-ARCHITECT-PROFESSIONAL/docs/architecture/reviews/WA-REVIEW-20260216-sample-system.md"
+      },
+      "script": "wa_review.py",
+      "timestamp": "2026-02-16T08:24:26.224844+00:00",
+      "workflow_version": "1.0.0"
+    },
+    {
+      "exit_code": 0,
+      "inputs": {
+        "interactive": false,
+        "system": "sample-system"
+      },
+      "outputs": {
+        "index_path": "/Users/cody/Documents/Skills/SAP-C02-AWS-SOLUTION-ARCHITECT-PROFESSIONAL/docs/architecture/index.md",
+        "manifest_path": "/Users/cody/Documents/Skills/SAP-C02-AWS-SOLUTION-ARCHITECT-PROFESSIONAL/docs/architecture/manifest/sample-system.yaml"
+      },
+      "script": "init_arch_workflow.py",
+      "timestamp": "2026-02-16T08:24:26.226120+00:00",
+      "workflow_version": "1.0.0"
+    },
+    {
+      "exit_code": 0,
+      "inputs": {
+        "date": null,
+        "interactive": false,
+        "system": "sample-system"
+      },
+      "outputs": {
+        "decision_trace_path": "/Users/cody/Documents/Skills/SAP-C02-AWS-SOLUTION-ARCHITECT-PROFESSIONAL/docs/architecture/reviews/DECISION-TRACE-20260216-sample-system.md",
+        "marker_count": 0
+      },
+      "script": "decision_trace.py",
+      "timestamp": "2026-02-16T08:24:26.227932+00:00",
+      "workflow_version": "1.0.0"
+    },
+    {
+      "exit_code": 0,
+      "inputs": {
+        "category": "networking",
+        "date": null,
+        "interactive": false,
+        "owners": "platform",
+        "slug": "net-boundary",
+        "status": "accepted",
+        "superseded_by": "",
+        "supersedes": "",
+        "system": "sample-system",
+        "tags": "network",
+        "template": "full",
+        "title": "network boundary"
+      },
+      "outputs": {
+        "adr_path": "/Users/cody/Documents/Skills/SAP-C02-AWS-SOLUTION-ARCHITECT-PROFESSIONAL/docs/architecture/decisions/ADR-20260216-net-boundary.md",
+        "index_path": "/Users/cody/Documents/Skills/SAP-C02-AWS-SOLUTION-ARCHITECT-PROFESSIONAL/docs/architecture/index.md"
+      },
+      "script": "new_adr.py",
+      "timestamp": "2026-02-16T08:24:26.228463+00:00",
+      "workflow_version": "1.0.0"
+    },
+    {
+      "exit_code": 1,
+      "inputs": {
+        "allow_fail_pillars": true,
+        "interactive": false,
+        "max_needs_work": 6,
+        "system": "sample-system"
+      },
+      "outputs": {
+        "issues_count": 7,
+        "result": "fail"
+      },
+      "script": "validate_archifacts.py",
+      "timestamp": "2026-02-16T08:24:26.245563+00:00",
+      "workflow_version": "1.0.0"
+    },
+    {
+      "exit_code": 0,
+      "inputs": {
+        "allow_fail_pillars": true,
+        "interactive": false,
+        "max_needs_work": 3,
+        "system": "sample-system"
+      },
+      "outputs": {
+        "issues_count": 0,
+        "result": "pass"
+      },
+      "script": "validate_archifacts.py",
+      "timestamp": "2026-02-16T08:26:27.448589+00:00",
+      "workflow_version": "1.0.0"
+    }
+  ],
+  "adrs": [
+    {
+      "category": "data-store",
+      "date": "2026-02-16",
+      "decision_id": "db-choice",
+      "owners": [
+        "platform",
+        "security"
+      ],
+      "path": "/Users/cody/Documents/Skills/SAP-C02-AWS-SOLUTION-ARCHITECT-PROFESSIONAL/docs/architecture/decisions/ADR-20260216-db-choice.md",
+      "slug": "db-choice",
+      "status": "accepted"
+    },
+    {
+      "category": "networking",
+      "date": "2026-02-16",
+      "decision_id": "net-boundary",
+      "owners": [
+        "platform"
+      ],
+      "path": "/Users/cody/Documents/Skills/SAP-C02-AWS-SOLUTION-ARCHITECT-PROFESSIONAL/docs/architecture/decisions/ADR-20260216-net-boundary.md",
+      "slug": "net-boundary",
+      "status": "accepted"
+    }
+  ],
+  "artifacts": {
+    "decisions_dir": "/Users/cody/Documents/Skills/SAP-C02-AWS-SOLUTION-ARCHITECT-PROFESSIONAL/docs/architecture/decisions",
+    "diagrams_dir": "/Users/cody/Documents/Skills/SAP-C02-AWS-SOLUTION-ARCHITECT-PROFESSIONAL/docs/architecture/diagrams",
+    "index": "/Users/cody/Documents/Skills/SAP-C02-AWS-SOLUTION-ARCHITECT-PROFESSIONAL/docs/architecture/index.md",
+    "manifest_dir": "/Users/cody/Documents/Skills/SAP-C02-AWS-SOLUTION-ARCHITECT-PROFESSIONAL/docs/architecture/manifest",
+    "reviews_dir": "/Users/cody/Documents/Skills/SAP-C02-AWS-SOLUTION-ARCHITECT-PROFESSIONAL/docs/architecture/reviews",
+    "runbooks_dir": "/Users/cody/Documents/Skills/SAP-C02-AWS-SOLUTION-ARCHITECT-PROFESSIONAL/docs/architecture/runbooks",
+    "solution_overviews_dir": "/Users/cody/Documents/Skills/SAP-C02-AWS-SOLUTION-ARCHITECT-PROFESSIONAL/docs/architecture/solution-overviews",
+    "threat_models_dir": "/Users/cody/Documents/Skills/SAP-C02-AWS-SOLUTION-ARCHITECT-PROFESSIONAL/docs/architecture/threat-models"
+  },
+  "decision_traces": [
+    {
+      "path": "/Users/cody/Documents/Skills/SAP-C02-AWS-SOLUTION-ARCHITECT-PROFESSIONAL/docs/architecture/reviews/DECISION-TRACE-20260216-sample-system.md",
+      "timestamp": "2026-02-16T08:24:26.227930+00:00"
+    }
+  ],
+  "last_updated": "2026-02-16T08:26:27.448472+00:00",
+  "manifest_path": "/Users/cody/Documents/Skills/SAP-C02-AWS-SOLUTION-ARCHITECT-PROFESSIONAL/docs/architecture/manifest/sample-system.yaml",
+  "repo_root": "/Users/cody/Documents/Skills/SAP-C02-AWS-SOLUTION-ARCHITECT-PROFESSIONAL",
+  "system": "sample-system",
+  "validations": [
+    {
+      "gate": {
+        "allow_fail_pillars": false,
+        "max_needs_work": 2
+      },
+      "issues": [
+        "Missing solution overview for system 'sample-system' in /Users/cody/Documents/Skills/SAP-C02-AWS-SOLUTION-ARCHITECT-PROFESSIONAL/docs/architecture/solution-overviews",
+        "Missing score for pillar: Operational Excellence",
+        "Missing score for pillar: Security",
+        "Missing score for pillar: Reliability",
+        "Missing score for pillar: Performance Efficiency",
+        "Missing score for pillar: Cost Optimization",
+        "Missing score for pillar: Sustainability"
+      ],
+      "result": "fail",
+      "timestamp": "2026-02-16T08:22:36.917047+00:00"
+    },
+    {
+      "gate": {
+        "allow_fail_pillars": true,
+        "max_needs_work": 6
+      },
+      "issues": [
+        "Missing solution overview for system 'sample-system' in /Users/cody/Documents/Skills/SAP-C02-AWS-SOLUTION-ARCHITECT-PROFESSIONAL/docs/architecture/solution-overviews",
+        "Missing score for pillar: Operational Excellence",
+        "Missing score for pillar: Security",
+        "Missing score for pillar: Reliability",
+        "Missing score for pillar: Performance Efficiency",
+        "Missing score for pillar: Cost Optimization",
+        "Missing score for pillar: Sustainability"
+      ],
+      "result": "fail",
+      "timestamp": "2026-02-16T08:24:26.245562+00:00"
+    },
+    {
+      "gate": {
+        "allow_fail_pillars": true,
+        "max_needs_work": 3
+      },
+      "issues": [],
+      "result": "pass",
+      "timestamp": "2026-02-16T08:26:27.448587+00:00"
+    }
+  ],
+  "wa_reviews": [
+    {
+      "date": "2026-02-16",
+      "path": "/Users/cody/Documents/Skills/SAP-C02-AWS-SOLUTION-ARCHITECT-PROFESSIONAL/docs/architecture/reviews/WA-REVIEW-20260216-sample-system.md"
+    }
+  ],
+  "workflow_version": "1.0.0"
+}

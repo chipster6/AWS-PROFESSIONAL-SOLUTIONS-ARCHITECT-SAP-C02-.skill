@@ -1,0 +1,39 @@
+{
+  "actions": [
+    {
+      "exit_code": 0,
+      "inputs": {
+        "has_notes_arg": true,
+        "interactive": false,
+        "notes_file": "",
+        "scenario": "associate",
+        "system": "eval-smoke"
+      },
+      "outputs": {
+        "notes_path": "/Users/cody/Documents/Skills/SAP-C02-AWS-SOLUTION-ARCHITECT-PROFESSIONAL/docs/architecture/reviews/EVAL-NOTES-20260216.md"
+      },
+      "script": "run_evals.py",
+      "timestamp": "2026-02-16T10:27:51.586918+00:00",
+      "workflow_version": "1.0.0"
+    }
+  ],
+  "adrs": [],
+  "artifacts": {},
+  "decision_traces": [],
+  "evals": [
+    {
+      "notes_path": "/Users/cody/Documents/Skills/SAP-C02-AWS-SOLUTION-ARCHITECT-PROFESSIONAL/docs/architecture/reviews/EVAL-NOTES-20260216.md",
+      "scenarios": [
+        "associate"
+      ],
+      "timestamp": "2026-02-16T10:27:51.586917+00:00"
+    }
+  ],
+  "last_updated": "2026-02-16T10:27:51.586914+00:00",
+  "manifest_path": "/Users/cody/Documents/Skills/SAP-C02-AWS-SOLUTION-ARCHITECT-PROFESSIONAL/docs/architecture/manifest/eval-smoke.yaml",
+  "repo_root": "/Users/cody/Documents/Skills/SAP-C02-AWS-SOLUTION-ARCHITECT-PROFESSIONAL",
+  "system": "eval-smoke",
+  "validations": [],
+  "wa_reviews": [],
+  "workflow_version": "1.0.0"
+}

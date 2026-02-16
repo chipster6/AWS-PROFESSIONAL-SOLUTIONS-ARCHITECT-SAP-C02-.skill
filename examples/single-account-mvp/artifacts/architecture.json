@@ -1,0 +1,45 @@
+{
+  "version": "v1",
+  "system": {
+    "name": "MVP Web API",
+    "overview": "Single-account MVP with serverless web and API, optimized for speed and low ops."
+  },
+  "constraints": {
+    "regions": ["us-east-1"],
+    "compliance": ["none"],
+    "rto": "24h",
+    "rpo": "24h",
+    "budget_sensitivity": "high"
+  },
+  "assumptions": [
+    { "id": "A-001", "statement": "Initial workload runs in a single AWS account." },
+    { "id": "A-002", "statement": "Traffic is modest and bursty; serverless is acceptable." }
+  ],
+  "decisions": [
+    {
+      "id": "D-001",
+      "title": "Landing zone strategy",
+      "decision": "Single-account baseline with org-ready controls.",
+      "adr_ref": "docs/02_ARCHITECTURE/ADRs/ADR-0001-single-account-landing-zone-strategy.md",
+      "pillars": ["security", "operational_excellence", "cost_optimization"],
+      "cost_drivers": ["log_retention"]
+    },
+    {
+      "id": "D-002",
+      "title": "Network architecture",
+      "decision": "Serverless-first with no VPC unless required for data services.",
+      "adr_ref": "docs/02_ARCHITECTURE/ADRs/ADR-0002-network-architecture-serverless-no-vpc.md",
+      "pillars": ["performance_efficiency", "cost_optimization"],
+      "cost_drivers": ["vpc_endpoints", "nat_gateways"]
+    },
+    {
+      "id": "D-003",
+      "title": "Security baseline",
+      "decision": "Enable CloudTrail, Config, Security Hub, GuardDuty; enforce least privilege.",
+      "adr_ref": "docs/02_ARCHITECTURE/ADRs/ADR-0003-security-baseline-logging-and-detections.md",
+      "pillars": ["security", "operational_excellence"],
+      "cost_drivers": ["log_ingest", "security_services"]
+    }
+  ]
+}
+

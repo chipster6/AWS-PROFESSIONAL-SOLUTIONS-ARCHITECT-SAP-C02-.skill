@@ -1,0 +1,10 @@
+```mermaid
+flowchart LR
+  user["User"] --> edge["CloudFront + ACM"]
+  edge --> web["S3 (static web)"]
+  edge --> api["API Gateway"]
+  api --> fn["Lambda"]
+  fn --> db["DynamoDB"]
+  fn --> obs["CloudWatch/X-Ray"]
+```
+
