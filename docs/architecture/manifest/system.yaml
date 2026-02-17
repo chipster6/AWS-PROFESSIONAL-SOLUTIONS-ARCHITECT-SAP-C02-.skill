@@ -1,0 +1,140 @@
+actions:
+- exit_code: 0
+  inputs:
+    force: false
+    interactive: false
+    system: system
+  outputs:
+    baseline_created:
+    - /Users/cody/Documents/Skills/SAP-C02-AWS-SOLUTION-ARCHITECT-PROFESSIONAL/docs/architecture/solution-overviews/system.md
+    - /Users/cody/Documents/Skills/SAP-C02-AWS-SOLUTION-ARCHITECT-PROFESSIONAL/docs/architecture/threat-models/system-threat-model-lite.md
+    - /Users/cody/Documents/Skills/SAP-C02-AWS-SOLUTION-ARCHITECT-PROFESSIONAL/docs/architecture/runbooks/system-runbook-baseline.md
+    - /Users/cody/Documents/Skills/SAP-C02-AWS-SOLUTION-ARCHITECT-PROFESSIONAL/docs/architecture/diagrams/system-context.md
+    - /Users/cody/Documents/Skills/SAP-C02-AWS-SOLUTION-ARCHITECT-PROFESSIONAL/docs/architecture/diagrams/system-containers.md
+    - /Users/cody/Documents/Skills/SAP-C02-AWS-SOLUTION-ARCHITECT-PROFESSIONAL/docs/architecture/diagrams/system-dataflow.md
+    - /Users/cody/Documents/Skills/SAP-C02-AWS-SOLUTION-ARCHITECT-PROFESSIONAL/docs/architecture/diagrams/system-network.md
+    baseline_doc_pack:
+      diagram_containers: /Users/cody/Documents/Skills/SAP-C02-AWS-SOLUTION-ARCHITECT-PROFESSIONAL/docs/architecture/diagrams/system-containers.md
+      diagram_context: /Users/cody/Documents/Skills/SAP-C02-AWS-SOLUTION-ARCHITECT-PROFESSIONAL/docs/architecture/diagrams/system-context.md
+      diagram_dataflow: /Users/cody/Documents/Skills/SAP-C02-AWS-SOLUTION-ARCHITECT-PROFESSIONAL/docs/architecture/diagrams/system-dataflow.md
+      diagram_network: /Users/cody/Documents/Skills/SAP-C02-AWS-SOLUTION-ARCHITECT-PROFESSIONAL/docs/architecture/diagrams/system-network.md
+      runbook_baseline: /Users/cody/Documents/Skills/SAP-C02-AWS-SOLUTION-ARCHITECT-PROFESSIONAL/docs/architecture/runbooks/system-runbook-baseline.md
+      solution_overview: /Users/cody/Documents/Skills/SAP-C02-AWS-SOLUTION-ARCHITECT-PROFESSIONAL/docs/architecture/solution-overviews/system.md
+      threat_model_lite: /Users/cody/Documents/Skills/SAP-C02-AWS-SOLUTION-ARCHITECT-PROFESSIONAL/docs/architecture/threat-models/system-threat-model-lite.md
+    baseline_existing: null
+    baseline_overwritten: null
+    index_path: /Users/cody/Documents/Skills/SAP-C02-AWS-SOLUTION-ARCHITECT-PROFESSIONAL/docs/architecture/index.md
+    manifest_path: /Users/cody/Documents/Skills/SAP-C02-AWS-SOLUTION-ARCHITECT-PROFESSIONAL/docs/architecture/manifest/system.yaml
+  script: init_arch_workflow.py
+  timestamp: '2026-02-16T23:47:27.511325+00:00'
+  workflow_version: 1.0.0
+- exit_code: 0
+  inputs:
+    force: false
+    interactive: false
+    system: system
+  outputs:
+    baseline_created: []
+    baseline_doc_pack:
+      diagram_containers: /Users/cody/Documents/Skills/SAP-C02-AWS-SOLUTION-ARCHITECT-PROFESSIONAL/docs/architecture/diagrams/system-containers.md
+      diagram_context: /Users/cody/Documents/Skills/SAP-C02-AWS-SOLUTION-ARCHITECT-PROFESSIONAL/docs/architecture/diagrams/system-context.md
+      diagram_dataflow: /Users/cody/Documents/Skills/SAP-C02-AWS-SOLUTION-ARCHITECT-PROFESSIONAL/docs/architecture/diagrams/system-dataflow.md
+      diagram_network: /Users/cody/Documents/Skills/SAP-C02-AWS-SOLUTION-ARCHITECT-PROFESSIONAL/docs/architecture/diagrams/system-network.md
+      runbook_baseline: /Users/cody/Documents/Skills/SAP-C02-AWS-SOLUTION-ARCHITECT-PROFESSIONAL/docs/architecture/runbooks/system-runbook-baseline.md
+      solution_overview: /Users/cody/Documents/Skills/SAP-C02-AWS-SOLUTION-ARCHITECT-PROFESSIONAL/docs/architecture/solution-overviews/system.md
+      threat_model_lite: /Users/cody/Documents/Skills/SAP-C02-AWS-SOLUTION-ARCHITECT-PROFESSIONAL/docs/architecture/threat-models/system-threat-model-lite.md
+    baseline_existing:
+    - /Users/cody/Documents/Skills/SAP-C02-AWS-SOLUTION-ARCHITECT-PROFESSIONAL/docs/architecture/solution-overviews/system.md
+    - /Users/cody/Documents/Skills/SAP-C02-AWS-SOLUTION-ARCHITECT-PROFESSIONAL/docs/architecture/threat-models/system-threat-model-lite.md
+    - /Users/cody/Documents/Skills/SAP-C02-AWS-SOLUTION-ARCHITECT-PROFESSIONAL/docs/architecture/runbooks/system-runbook-baseline.md
+    - /Users/cody/Documents/Skills/SAP-C02-AWS-SOLUTION-ARCHITECT-PROFESSIONAL/docs/architecture/diagrams/system-context.md
+    - /Users/cody/Documents/Skills/SAP-C02-AWS-SOLUTION-ARCHITECT-PROFESSIONAL/docs/architecture/diagrams/system-containers.md
+    - /Users/cody/Documents/Skills/SAP-C02-AWS-SOLUTION-ARCHITECT-PROFESSIONAL/docs/architecture/diagrams/system-dataflow.md
+    - /Users/cody/Documents/Skills/SAP-C02-AWS-SOLUTION-ARCHITECT-PROFESSIONAL/docs/architecture/diagrams/system-network.md
+    baseline_overwritten: []
+    index_path: /Users/cody/Documents/Skills/SAP-C02-AWS-SOLUTION-ARCHITECT-PROFESSIONAL/docs/architecture/index.md
+    manifest_path: /Users/cody/Documents/Skills/SAP-C02-AWS-SOLUTION-ARCHITECT-PROFESSIONAL/docs/architecture/manifest/system.yaml
+  script: init_arch_workflow.py
+  timestamp: '2026-02-17T07:44:13.909284+00:00'
+  workflow_version: 1.0.0
+- exit_code: 0
+  inputs:
+    category: networking
+    date: null
+    interactive: false
+    owners: Platform Architecture Team,Security Team
+    slug: private-subnet-boundary
+    status: accepted
+    superseded_by: ''
+    supersedes: ''
+    system: system
+    tags: networking,security,segmentation
+    template: full
+    title: Use private subnets with ALB-only ingress
+  outputs:
+    adr_path: /Users/cody/Documents/Skills/SAP-C02-AWS-SOLUTION-ARCHITECT-PROFESSIONAL/docs/architecture/decisions/ADR-20260217-private-subnet-boundary.md
+    index_path: /Users/cody/Documents/Skills/SAP-C02-AWS-SOLUTION-ARCHITECT-PROFESSIONAL/docs/architecture/index.md
+  script: new_adr.py
+  timestamp: '2026-02-17T07:45:12.278525+00:00'
+  workflow_version: 1.0.0
+- exit_code: 0
+  inputs:
+    date: null
+    interactive: false
+    system: system
+  outputs:
+    wa_review_path: /Users/cody/Documents/Skills/SAP-C02-AWS-SOLUTION-ARCHITECT-PROFESSIONAL/docs/architecture/reviews/WA-REVIEW-20260217-system.md
+  script: wa_review.py
+  timestamp: '2026-02-17T07:45:15.399945+00:00'
+  workflow_version: 1.0.0
+- exit_code: 0
+  inputs:
+    date: null
+    interactive: false
+    system: system
+  outputs:
+    decision_trace_path: /Users/cody/Documents/Skills/SAP-C02-AWS-SOLUTION-ARCHITECT-PROFESSIONAL/docs/architecture/reviews/DECISION-TRACE-20260217-system.md
+    marker_count: 6
+  script: decision_trace.py
+  timestamp: '2026-02-17T07:45:33.990662+00:00'
+  workflow_version: 1.0.0
+adrs:
+- category: networking
+  date: '2026-02-17'
+  decision_id: private-subnet-boundary
+  owners:
+  - Platform Architecture Team
+  - Security Team
+  path: /Users/cody/Documents/Skills/SAP-C02-AWS-SOLUTION-ARCHITECT-PROFESSIONAL/docs/architecture/decisions/ADR-20260217-private-subnet-boundary.md
+  slug: private-subnet-boundary
+  status: accepted
+artifacts:
+  baseline_doc_pack:
+    diagrams:
+      containers: /Users/cody/Documents/Skills/SAP-C02-AWS-SOLUTION-ARCHITECT-PROFESSIONAL/docs/architecture/diagrams/system-containers.md
+      context: /Users/cody/Documents/Skills/SAP-C02-AWS-SOLUTION-ARCHITECT-PROFESSIONAL/docs/architecture/diagrams/system-context.md
+      dataflow: /Users/cody/Documents/Skills/SAP-C02-AWS-SOLUTION-ARCHITECT-PROFESSIONAL/docs/architecture/diagrams/system-dataflow.md
+      network: /Users/cody/Documents/Skills/SAP-C02-AWS-SOLUTION-ARCHITECT-PROFESSIONAL/docs/architecture/diagrams/system-network.md
+    runbook_baseline: /Users/cody/Documents/Skills/SAP-C02-AWS-SOLUTION-ARCHITECT-PROFESSIONAL/docs/architecture/runbooks/system-runbook-baseline.md
+    solution_overview: /Users/cody/Documents/Skills/SAP-C02-AWS-SOLUTION-ARCHITECT-PROFESSIONAL/docs/architecture/solution-overviews/system.md
+    threat_model_lite: /Users/cody/Documents/Skills/SAP-C02-AWS-SOLUTION-ARCHITECT-PROFESSIONAL/docs/architecture/threat-models/system-threat-model-lite.md
+  decisions_dir: /Users/cody/Documents/Skills/SAP-C02-AWS-SOLUTION-ARCHITECT-PROFESSIONAL/docs/architecture/decisions
+  diagrams_dir: /Users/cody/Documents/Skills/SAP-C02-AWS-SOLUTION-ARCHITECT-PROFESSIONAL/docs/architecture/diagrams
+  index: /Users/cody/Documents/Skills/SAP-C02-AWS-SOLUTION-ARCHITECT-PROFESSIONAL/docs/architecture/index.md
+  manifest_dir: /Users/cody/Documents/Skills/SAP-C02-AWS-SOLUTION-ARCHITECT-PROFESSIONAL/docs/architecture/manifest
+  reviews_dir: /Users/cody/Documents/Skills/SAP-C02-AWS-SOLUTION-ARCHITECT-PROFESSIONAL/docs/architecture/reviews
+  runbooks_dir: /Users/cody/Documents/Skills/SAP-C02-AWS-SOLUTION-ARCHITECT-PROFESSIONAL/docs/architecture/runbooks
+  solution_overviews_dir: /Users/cody/Documents/Skills/SAP-C02-AWS-SOLUTION-ARCHITECT-PROFESSIONAL/docs/architecture/solution-overviews
+  threat_models_dir: /Users/cody/Documents/Skills/SAP-C02-AWS-SOLUTION-ARCHITECT-PROFESSIONAL/docs/architecture/threat-models
+decision_traces:
+- path: /Users/cody/Documents/Skills/SAP-C02-AWS-SOLUTION-ARCHITECT-PROFESSIONAL/docs/architecture/reviews/DECISION-TRACE-20260217-system.md
+  timestamp: '2026-02-17T07:45:33.990660+00:00'
+last_updated: '2026-02-17T07:45:33.990654+00:00'
+manifest_path: /Users/cody/Documents/Skills/SAP-C02-AWS-SOLUTION-ARCHITECT-PROFESSIONAL/docs/architecture/manifest/system.yaml
+repo_root: /Users/cody/Documents/Skills/SAP-C02-AWS-SOLUTION-ARCHITECT-PROFESSIONAL
+system: system
+validations: []
+wa_reviews:
+- date: '2026-02-17'
+  path: /Users/cody/Documents/Skills/SAP-C02-AWS-SOLUTION-ARCHITECT-PROFESSIONAL/docs/architecture/reviews/WA-REVIEW-20260217-system.md
+workflow_version: 1.0.0

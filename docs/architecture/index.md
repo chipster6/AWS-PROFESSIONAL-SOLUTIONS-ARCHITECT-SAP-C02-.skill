@@ -9,3 +9,6 @@
 - Manifest: `docs/architecture/manifest/`
 - ADR: `docs/architecture/decisions/ADR-20260216-db-choice.md`
 - ADR: `docs/architecture/decisions/ADR-20260216-net-boundary.md`
+- ADR: `docs/architecture/decisions/ADR-20260217-db-choice.md`
+- ADR: `docs/architecture/decisions/ADR-20260217-private-subnet-boundary.md`
+- ADR: `docs/architecture/decisions/ADR-20260217-null-list-test.md`

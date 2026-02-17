@@ -1,0 +1,24 @@
+actions:
+- exit_code: 0
+  inputs:
+    date: null
+    interactive: false
+    system: legacysys
+  migrated_manifest_from: /Users/cody/Documents/Skills/SAP-C02-AWS-SOLUTION-ARCHITECT-PROFESSIONAL/docs/architecture/manifest/legacysys.yaml
+  outputs:
+    wa_review_path: /Users/cody/Documents/Skills/SAP-C02-AWS-SOLUTION-ARCHITECT-PROFESSIONAL/docs/architecture/reviews/WA-REVIEW-20260217-legacysys.md
+  script: wa_review.py
+  timestamp: '2026-02-17T08:13:30.183653+00:00'
+  workflow_version: 1.0.0
+adrs: []
+artifacts: {}
+decision_traces: []
+last_updated: '2026-02-17T08:13:30.183553+00:00'
+manifest_path: /Users/cody/Documents/Skills/SAP-C02-AWS-SOLUTION-ARCHITECT-PROFESSIONAL/legacysys.yaml
+repo_root: /Users/cody/Documents/Skills/SAP-C02-AWS-SOLUTION-ARCHITECT-PROFESSIONAL
+system: legacysys
+validations: []
+wa_reviews:
+- date: '2026-02-17'
+  path: /Users/cody/Documents/Skills/SAP-C02-AWS-SOLUTION-ARCHITECT-PROFESSIONAL/docs/architecture/reviews/WA-REVIEW-20260217-legacysys.md
+workflow_version: 1.0.0

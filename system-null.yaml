@@ -1,0 +1,39 @@
+actions:
+- exit_code: 0
+  inputs:
+    category: test
+    date: null
+    interactive: false
+    owners: owner1
+    slug: null
+    status: accepted
+    superseded_by: ''
+    supersedes: ''
+    system: system-null
+    tags: tag1
+    template: full
+    title: Null List Test
+  outputs:
+    adr_path: /Users/cody/Documents/Skills/SAP-C02-AWS-SOLUTION-ARCHITECT-PROFESSIONAL/docs/architecture/decisions/ADR-20260217-null-list-test.md
+    index_path: /Users/cody/Documents/Skills/SAP-C02-AWS-SOLUTION-ARCHITECT-PROFESSIONAL/docs/architecture/index.md
+  script: new_adr.py
+  timestamp: '2026-02-17T08:13:24.665028+00:00'
+  workflow_version: 1.0.0
+adrs:
+- category: test
+  date: '2026-02-17'
+  decision_id: null-list-test
+  owners:
+  - owner1
+  path: /Users/cody/Documents/Skills/SAP-C02-AWS-SOLUTION-ARCHITECT-PROFESSIONAL/docs/architecture/decisions/ADR-20260217-null-list-test.md
+  slug: null-list-test
+  status: accepted
+artifacts: {}
+decision_traces: []
+last_updated: '2026-02-17T08:13:24.665023+00:00'
+manifest_path: /Users/cody/Documents/Skills/SAP-C02-AWS-SOLUTION-ARCHITECT-PROFESSIONAL/system-null.yaml
+repo_root: /Users/cody/Documents/Skills/SAP-C02-AWS-SOLUTION-ARCHITECT-PROFESSIONAL
+system: system-null
+validations: []
+wa_reviews: []
+workflow_version: 1.0.0
