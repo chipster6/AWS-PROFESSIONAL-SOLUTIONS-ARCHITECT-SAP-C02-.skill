@@ -2,7 +2,9 @@
 from __future__ import annotations
 
 import argparse
+import os
 import re
+import shutil
 import sys
 from datetime import datetime, timezone
 from pathlib import Path
@@ -42,6 +44,37 @@ def resolve_repo_root(start: Path) -> Path:
         if cur.parent == cur:
             raise RuntimeError("Could not resolve REPO_ROOT; .git/ or .agents/skills/ was not found.")
         cur = cur.parent
+
+
+def resolve_manifest_path(repo_root: Path, system: str) -> Path:
+    return Path(os.path.join(repo_root, f"{system}.yaml"))
+
+
+def migrate_legacy_manifest(repo_root: Path, system: str) -> str | None:
+    manifest_path = resolve_manifest_path(repo_root, system)
+    legacy_manifest_path = repo_root / "docs" / "architecture" / "manifest" / f"{system}.yaml"
+    if legacy_manifest_path.exists() and not manifest_path.exists():
+        manifest_path.parent.mkdir(parents=True, exist_ok=True)
+        shutil.copy2(legacy_manifest_path, manifest_path)
+        return str(legacy_manifest_path)
+    return None
+
+
+def normalize_manifest(m: Any) -> dict[str, Any]:
+    manifest = m if isinstance(m, dict) else {}
+    if not isinstance(manifest.get("adrs"), list):
+        manifest["adrs"] = []
+    if not isinstance(manifest.get("wa_reviews"), list):
+        manifest["wa_reviews"] = []
+    if not isinstance(manifest.get("validations"), list):
+        manifest["validations"] = []
+    if not isinstance(manifest.get("decision_traces"), list):
+        manifest["decision_traces"] = []
+    if not isinstance(manifest.get("actions"), list):
+        manifest["actions"] = []
+    if not isinstance(manifest.get("artifacts"), dict):
+        manifest["artifacts"] = {}
+    return manifest
 
 
 def load_manifest(path: Path) -> dict[str, Any]:
@@ -150,8 +183,9 @@ def main() -> int:
                 lines.append(f"  ADR: {adrs.get(key, 'MISSING')}\n")
         out_path.write_text("".join(lines), encoding="utf-8")
 
-        manifest_path = arch_root / "manifest" / f"{args.system}.yaml"
-        manifest = load_manifest(manifest_path)
+        manifest_path = resolve_manifest_path(repo_root, args.system)
+        migrated_manifest_from = migrate_legacy_manifest(repo_root, args.system)
+        manifest = normalize_manifest(load_manifest(manifest_path))
         ensure_common_manifest_keys(manifest, repo_root, manifest_path, args.system)
         manifest["decision_traces"].append(
             {
@@ -169,6 +203,8 @@ def main() -> int:
                 "workflow_version": WORKFLOW_VERSION,
             }
         )
+        if migrated_manifest_from:
+            manifest["actions"][-1]["migrated_manifest_from"] = migrated_manifest_from
         save_manifest(manifest_path, manifest)
 
         print(str(out_path))

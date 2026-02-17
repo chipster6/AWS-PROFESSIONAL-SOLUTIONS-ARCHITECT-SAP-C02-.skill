@@ -42,6 +42,7 @@ DR pattern: {{dr_pattern}}
 ## Major Decisions
 Use canonical marker syntax exactly:
 `MAJOR_DECISION: <category> | <decision_id_or_slug> | <one-line summary>`
+Add one `MAJOR_DECISION` line for every major architecture decision that requires ADR mapping.
 
 Examples:
 `MAJOR_DECISION: data-store | db-choice | Choose Aurora PostgreSQL over DynamoDB due to relational constraints`

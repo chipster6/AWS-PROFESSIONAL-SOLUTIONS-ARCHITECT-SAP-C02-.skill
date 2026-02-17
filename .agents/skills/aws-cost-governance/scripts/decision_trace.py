@@ -28,6 +28,11 @@ def resolve_repo_root(start: Path) -> Path:
         cur = cur.parent
 
 
+def resolve_python_command(repo_root: Path) -> Path | str:
+    venv_python = repo_root / ".venv" / "bin" / "python"
+    return venv_python if venv_python.exists() else "python3"
+
+
 def main() -> int:
     script_name = Path(__file__).name
     if script_name not in ALLOWED:
@@ -50,7 +55,10 @@ def main() -> int:
         if not shared.exists():
             print(f"Error: shared script not found: {shared}", file=sys.stderr)
             return 1
-        proc = subprocess.run(["python3", str(shared), *sys.argv[1:]], check=False)
+        proc = subprocess.run(
+            [str(resolve_python_command(repo_root)), str(shared), *sys.argv[1:]],
+            check=False,
+        )
         return proc.returncode
     except Exception as exc:
         print(f"Error: {exc}", file=sys.stderr)
